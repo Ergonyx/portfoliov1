@@ -150,18 +150,28 @@ body {
           justify-content: space-evenly;
 }
 
+.main__buttons a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #222;
+}
+
+.main__buttons a:hover {
+  text-shadow: 0 0 3px #e4e4e4;
+  color: #e4e4e4;
+}
+
 .main__buttons button {
   margin: 20px;
   padding: 15px;
   font-size: 1.25rem;
   font-weight: bold;
   border-radius: 25px;
-  border: 1px solid blue;
-  border-top-color: #f00;
   border: 0;
   -webkit-box-shadow: 2px 2px 3px black inset;
           box-shadow: 2px 2px 3px black inset;
   cursor: pointer;
+  color: #222;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -171,9 +181,10 @@ body {
 }
 
 .main__buttons button:hover {
-  background: #999;
+  background: #333;
   -webkit-box-shadow: 2px 2px 5px black;
           box-shadow: 2px 2px 5px black;
+  color: #e4e4e4;
 }
 
 .projects {
@@ -221,6 +232,7 @@ body {
   width: 256px;
   height: 144px;
   background: url("images/pv1thumb.png");
+  background-position: center;
 }
 
 .projects__left--code {
@@ -282,9 +294,79 @@ body {
   overflow-y: scroll;
 }
 
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin: 20px 0 100px 0;
+  text-align: center;
+  min-width: 460px;
+}
+
+.about__me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid #222;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.about__skills {
+  width: 140px;
+  text-align: left;
+  margin: 20px 10px;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+}
+
+.about ul li {
+  list-style: none;
+}
+
+.about__text {
+  max-width: 460px;
+  text-align: left;
+  line-height: 1.5rem;
+  margin: 20px 10px;
+}
+
+.about__text p:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.about__text p a {
+  text-decoration: none;
+  color: #e4e4e4;
+  font-weight: bold;
+  text-shadow: 0 2px 3px #e4e4e4;
+}
+
+.about h1 {
+  margin-bottom: 30px;
+}
+
+.about span {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 .footer {
   background: #222;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   display: -webkit-box;
@@ -321,6 +403,16 @@ body {
 
 .footer__socials button:hover {
   background-color: #444;
+}
+
+.footer__socials button a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #e4e4e4;
+}
+
+.footer__socials button a:hover {
+  text-shadow: 0 0 3px #e4e4e4;
 }
 
 @media (max-width: 600px) {
